@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block start %}
+
+<section id="featured-jobs">
+    <div class="container">
+        <h2>Here are all the job listings.</h2>
+        
+            {% for job in all_jobs %}
+            <div class="job">
+            <h3>{{ job.job_name }}</h3>
+            <p>{{ job.job_description }}</p>
+            <a href="#" class="btn btn-primary">Apply Now</a>
+            </div>
+            {% endfor %}
+            
+        </div>
+</section>
+
+
+
+{% endblock %}

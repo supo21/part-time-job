@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block start %}
+
+<section id="hero">
+    <div class="container">
+        <h2>Welcome to FlexJobs Hub</h2>
+        <p>Find part-time jobs that fit your schedule and lifestyle.</p>
+        
+
+   	 <div class="main-search-input-wrap">
+       
+     
+        <div class="main-search-input fl-wrap">
+            <div class="main-search-input-item">
+                <label for ="job_name"></label>
+                <input type="text" name="search" value=""  placeholder="Search Jobs...">
+                    </div>
+                                            
+                    <button type="submit" class="main-search-button"><a href="/search_job/">Search</a></button>
+                    </div>
+                                        
+                    </div>
+        
+    </div>
+</section>
+
+<section id="featured-jobs">
+    <div class="container">
+        <h2>Featured Jobs</h2>
+        
+            {% for job in featured_jobs %}
+            <div class="job">
+            <h3>{{ job.job_name }}</h3>
+            <p>{{ job.job_description }}</p>
+            <a href="#" class="btn btn-primary">Apply Now</a>
+            </div>
+            {% endfor %}
+    </div>
+</section>
+
+<section id="testimonials">
+    <div class="container">
+        <h2>Testimonials</h2>
+        <div class="testimonial">
+            <p>"FlexJobs Hub helped me find the perfect part-time job. Highly recommended!"</p>
+            <p class="author">- Roshan Malla</p>
+        </div>
+        <!-- More testimonials -->
+    </div>
+</section>
+
+<section id="about">
+    <div class="container">
+        <h2>About Us</h2>
+        <p>Our mission is simple: to connect talented individuals like you with flexible part-time opportunities that not only provide financial support but also allow you to grow both personally and professionally.</p>
+    </div>
+</section>
+
+
+{% endblock %}
